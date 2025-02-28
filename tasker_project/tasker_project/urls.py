@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path("", include('tasker_front.urls')),
     path("admin/", admin.site.urls),
     path('api/', include('tasker_app.urls'))
 ]
