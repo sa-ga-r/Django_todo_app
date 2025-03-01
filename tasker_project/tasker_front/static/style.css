@@ -2,8 +2,8 @@ body {
     /*display : flex;
     flex-direction : column;*/
     font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
+    margin: 100px;
+    padding:100px;
     background-color:#c8f4f4;
 }
 
@@ -13,6 +13,7 @@ body {
     max-width:600px;
     margin : 0 auto;
     padding :20px;
+    gap : 100px;
     background-color: #cfff;
     box-shadow : 0 0 10px rgba(0,0,0,0.1),
 }
@@ -48,5 +49,5 @@ button:hover {
 
 .task_form {
     display : flex;
-    
+    flex-direction : column;
 }
