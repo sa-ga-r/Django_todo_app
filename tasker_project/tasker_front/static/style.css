@@ -1,19 +1,15 @@
 body {
-    /*display : flex;
-    flex-direction : column;*/
     font-family:Arial, Helvetica, sans-serif;
-    margin: 100px;
-    padding:100px;
+    margin:0;
+    padding:0;
     background-color:#c8f4f4;
 }
-
+/*
 .app {
-    /*display : flex;
-    flex-direction:column;*/
     max-width:600px;
     margin : 0 auto;
-    padding :20px;
-    gap : 100px;
+    padding :50px;
+    border:10px;
     background-color: #cfff;
     box-shadow : 0 0 10px rgba(0,0,0,0.1),
 }
@@ -31,7 +27,7 @@ li {
     background-color: #f1f1f1;
     margin : 10px 0;
     padding : 10px;
-    border-radius : 5px;
+    border-radius : 10px;
 }
 
 button {
@@ -45,9 +41,4 @@ button {
 
 button:hover {
     background-color : #45a049;
-}
-
-.task_form {
-    display : flex;
-    flex-direction : column;
-}
+}*/
