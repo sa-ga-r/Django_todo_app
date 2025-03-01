@@ -8,11 +8,11 @@ body {
 .app {
     display : flex;
     flex-direction : column;
-    max-width:600px;
+    align-items : centre;
+    max-width:200px;
     margin : 0 auto;
     padding :50px;
-    border:10px;
-    background-color: #cfff;
+    gap : 10px;
     box-shadow : 0 0 10px rgba(0,0,0,0.1),
 }
 
@@ -30,6 +30,22 @@ li {
     margin : 10px 0;
     padding : 10px;
     border-radius : 10px;
+}
+
+.task_form {
+    display : flex;
+    flex-direction: column;
+    width : 100%;
+    margin : 5px;
+    padding : 5px;
+    gap : 10px;
+    align-items : center;
+}
+
+.is_completed_chkbx {
+    display : flex;
+    align-items : center;
+    align-self : flex-start;
 }
 
 button {
