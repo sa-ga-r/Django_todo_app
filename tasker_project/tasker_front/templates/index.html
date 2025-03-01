@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Tasker</title>
-        <link rel="stylesheet", href="style.css">
+        <link rel="stylesheet", href="static/style.css">
     </head>
     <body>
         <div class="app">
@@ -9,9 +9,11 @@
             <ul id="task_list"></ul>
             <form id="task_form">
                 <input type="text" id="task_input" placeholder="Input task">
+                <input type="text" id="desc_input" placeholder="Input task description">
+                <input type="checkbox" id="is_complited">Is it complete?
                 <button type="submit">Add Task</button>
             </form>
         </div>
-        <script src="app.js"></script>
+        <script src="static/app.js"></script>
     </body>
 </html>
