@@ -1,7 +1,9 @@
 body {
+    display : flex;
+    flex-direction: column;
     font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
+    margin: 10px;
+    padding:10px;
     background-color:#c8f4f4;
 }
 
@@ -9,8 +11,8 @@ body {
     display : flex;
     flex-direction : column;
     align-items : centre;
-    max-width:200px;
-    margin : 0 auto;
+    max-width:500px;
+    margin : 10 auto;
     padding :50px;
     gap : 10px;
     box-shadow : 0 0 10px rgba(0,0,0,0.1),
@@ -45,6 +47,8 @@ li {
 .is_completed_chkbx {
     display : flex;
     align-items : center;
+    margin : 5px;
+    padding : 5px;
     align-self : flex-start;
 }
 
