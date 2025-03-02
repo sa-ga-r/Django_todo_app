@@ -11,7 +11,7 @@ body {
     display : flex;
     flex-direction : column;
     align-items : centre;
-    max-width:500px;
+    max-width:800px;
     margin : 10 auto;
     padding :50px;
     gap : 10px;
@@ -70,4 +70,15 @@ button:hover {
     margin : 5px;
     padding : 5px;
     border : 1px solid;
+    align-items: center;
+    max-width : 800px;
+    margin : 10px auto;
+    padding : 5px;
+    background-color : #e8f4f4;
+}
+
+th, td {
+    padding : 10px;
+    text-align : left;
+    border : 1px solid #ddd;
 }
