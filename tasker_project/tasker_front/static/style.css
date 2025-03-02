@@ -15,6 +15,7 @@ body {
     margin : 10 auto;
     padding :50px;
     gap : 10px;
+    background-color: #e8f4f4;
     box-shadow : 0 0 10px rgba(0,0,0,0.1),
 }
 
