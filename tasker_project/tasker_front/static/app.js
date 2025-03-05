@@ -6,7 +6,7 @@ function fetchTasks(){
     fetch('/api/task/')
     .then(respone => response.json())
     .then(data => updateTaskTable(data))
-    .catch(error => console.error("Error fetching the tasks", error));
+    .catch(error => alert("Error fetching the tasks", error));
 }
 
 function updateTaskTable(tasks){
@@ -18,7 +18,7 @@ function updateTaskTable(tasks){
     return;
     }
     tasks.forEach((task, index)=>{
-        let row = document.createElement("tr");
+        let row = docoument.createElement("tr");
         row.innerHTML = 
         '<td>${index + 1}</td><td>${task.title}</td><td>${task.description}</td><td>${new Date(task.created_at).toLocalString()}</td><td><button onclick="updateTask(${task.id})">Update</button><button onclick="deleteTask(${task.id})"></button></td>';
         tableBody.appendChild(row);
