@@ -14,7 +14,7 @@
                 <lable class="is_completed_chkbx">
                     <input type="checkbox" id="is_complited">Is it complete?
                 </lable>
-                <button type="submit">Add New Task</button>
+                <button type="submit" onclick="fetchTasks()">Add New Task</button>
             </form>
         </div>
         <div class="task_table">
@@ -35,7 +35,7 @@
         </div>
         <div class="log_box">
             <h3>Logs1:</h3>
-            <button type="submit" onclick="<h3>sagar</h3>">Get Logs</button>
+            <button type="submit" onclick="fetchTasks()">Get Logs</button>
             <p id="log_text"></p>
         </div>
         {% load static %}
