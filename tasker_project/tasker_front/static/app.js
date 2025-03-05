@@ -1,4 +1,4 @@
-const BaseURL="https://refactored-funicular-447j6q57q9p3jxxv-8000.app.github.dev/api/tasks/"
+const BaseURL="https://refactored-funicular-447j6q57q9p3jxxv-8000.app.github.dev/api/task/"
 
 document.addEventListener("DOMContent Loaded", function (){
     fetchTasks();
