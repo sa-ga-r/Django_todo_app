@@ -3,10 +3,11 @@ document.addEventListener("DOMContent Loaded", function (){
 });
 
 function fetchTasks(){
-    fetch('api/')
+    fetch('api/task')
     .then(response => response.json())
     .then(data => updateTaskTable(data))
-    .catch(error => alert("Error fetching the tasks", error));
+    document.getElementById("log_text").innerText=data;
+    //.catch(error => alert("Error fetching the tasks", error));
 }
 
 function updateTaskTable(tasks){
