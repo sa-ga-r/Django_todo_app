@@ -1,11 +1,9 @@
-const BaseURL="https://refactored-funicular-447j6q57q9p3jxxv-8000.app.github.dev/api/task/"
-
 document.addEventListener("DOMContent Loaded", function (){
     fetchTasks();
 });
 
 function fetchTasks(){
-    fetch(BaseURL)
+    fetch('/api/task/')
     .then(respone => response.json())
     .then(data => updateTaskTable(data))
     .catch(error => console.error("Error fetching the tasks", error));
@@ -29,7 +27,7 @@ function updateTaskTable(tasks){
 
 function deleteTask(taskId){
     if (!confirm("Are you sure, you want to delete the task???")) return;
-    fetch('BaseURL/${taskId}/',
+    fetch('api/task/${taskId}/',
         {method:"DELETE"})
         .then(response => {
             if(response.ok){
@@ -46,7 +44,7 @@ function updateTask(taskId){
     let newDescription = promt("Enter new description:");
     if (!newTitle || !newDescription)
         return;
-    fetch('BaseURL/${taskId}/', {
+    fetch('api/task/${taskId}/', {
         method : 'PUT',
         headers : {
             'Content-Type':'application/json',
