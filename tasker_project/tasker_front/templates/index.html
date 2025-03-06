@@ -1,7 +1,7 @@
+{% load static %}
 <html>
     <head>
         <title>Tasker</title>
-        {% load static %}
         <link rel="stylesheet", href="{% static '/style.css' %}">
     </head>
     <body>
@@ -28,8 +28,7 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody id="task_table_body">
-                
+            <tbody id="task_table_body">  
             </tbody>
             </table>
         </div>
@@ -38,7 +37,6 @@
             <button type="submit" onclick="fetchTasks">Get Logs</button>
             <p id="log_text"></p>
         </div>
-        {% load static %}
         <script src="{% static '/app.js' %}"></script>
     </body>
 </html>
