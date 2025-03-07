@@ -32,11 +32,9 @@
             </tbody>
             </table>
         </div>
-        <div class="log_box">
-            <h3>Logs1:</h3>
-            <button type="submit" onclick="fetchTasks">Get Logs</button>
-            <p id="log_text"></p>
-        </div>
-        <script src="{% static '/app.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+        <script>eruda.init();</script>
+        <script src="{% static 'app.js'%}">
+        </script>
     </body>
 </html>
