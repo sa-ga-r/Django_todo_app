@@ -5,8 +5,8 @@ document.addEventListener("DOMContent Loaded", function (){
 function fetchTasks(){
     fetch('api/task')
     .then(response => response.json())
-    .then(data => updateTaskTable(data))
-    console.log(data);
+    //.then(data => updateTaskTable(data))
+    .then(data => console.log(data))
     //.catch(error => alert("Error fetching the tasks", error));
 }
 
