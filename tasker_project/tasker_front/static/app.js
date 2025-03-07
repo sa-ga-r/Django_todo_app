@@ -1,6 +1,6 @@
-document.addEventListener("DOMContent Loaded", function (){
+/*document.addEventListener("DOMContent Loaded", function (){
     fetchTasks();
-});
+});*/
 
 function fetchTasks(){
     fetch('api/task')
@@ -62,4 +62,8 @@ function updateTask(taskId){
         }
     })
     .catch(error=>console.error("Error updating task:", error));
+}
+
+function write_con(){
+    console.log('Clicked');
 }
