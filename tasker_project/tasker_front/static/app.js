@@ -1,69 +1,38 @@
-/*document.addEventListener("DOMContent Loaded", function (){
-    fetchTasks();
-});*/
+document.addEventListener("DOMContent Loaded", fetchTasks);
 
 function fetchTasks(){
     fetch('api/task')
     .then(response => response.json())
-    //.then(data => updateTaskTable(data))
-    .then(data => console.log(data))
-    //.catch(error => alert("Error fetching the tasks", error));
+    .then(data => {updateTable(data);})
+    .catch(error => alert("Error fetching the tasks", error));
 }
 
-function updateTaskTable(tasks){
-    let tableBody = getElimentById("task_table_body");
-    tableBody.innerHTML="";
-    if (tasks.length===0){
-    tableBody.innerHTML = 
-    '<tr><td colspan = "5" style="text-align:center";>No Tasks Available</tr></td>';
-    return;
-    }
-    tasks.forEach((task, index)=>{
-        let row = docoument.createElement("tr");
-        row.innerHTML = 
-        '<td>${index + 1}</td><td>${task.title}</td><td>${task.description}</td><td>${new Date(task.created_at).toLocalString()}</td><td><button onclick="updateTask(${task.id})">Update</button><button onclick="deleteTask(${task.id})"></button></td>';
+function updateTable(data){
+    const tableBody = document.getElementById("task_table_body");
+    tableBody.innerHTML = "";
+    data.forEach(task => {
+        const row = document.createElement("tr");
+        const idCell = document.createElement("td");
+        idCell.textContent = task.id;
+        const titleCell = document.createElement("td");
+        titleCell.textContent = task.title;
+        const descCell = document.createElement("td");
+        descCell.textContent = task.description;
+        const actCell = document.createElement("td");
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.onclick = () => editTask(task.id);
+        actCell.appendChild(editBtn);
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.style.marginLeft = "10px";
+        delBtn.onclick = () => delTask(task.id);
+        actCell.appendChild(delBtn);
+
+        row.appendChild(idCell);
+        row.appendChild(titleCell);
+        row.appendChild(descCell);
+        row.appendChild(actCell);
         tableBody.appendChild(row);
     });
-}
-
-function deleteTask(taskId){
-    if (!confirm("Are you sure, you want to delete the task???")) return;
-    fetch('api/task/${taskId}/',
-        {method:"DELETE"})
-        .then(response => {
-            if(response.ok){
-                fetchTasks();
-            }else{
-                console.error("Failed to delete task");
-            }
-        })
-        .catch(error=>console.error('Error deleting the task:', error));
-    }
-
-function updateTask(taskId){
-    let newTitle = promt("Update new title:");
-    let newDescription = promt("Enter new description:");
-    if (!newTitle || !newDescription)
-        return;
-    fetch('api/task/${taskId}/', {
-        method : 'PUT',
-        headers : {
-            'Content-Type':'application/json',
-        },
-        body:JSON.stringify({
-            title:newTitle, description:newDescription
-        }),
-    })
-    .then(response => {
-        if (response.ok){
-            fetchTasks();
-        } else {
-            console.error("Failed to update task");
-        }
-    })
-    .catch(error=>console.error("Error updating task:", error));
-}
-
-function write_con(){
-    console.log('Clicked');
 }
