@@ -1,4 +1,4 @@
-document.addEventListener("DOMContent Loaded", fetchTasks);
+document.addEventListener("DOMContent Loaded", fetchTasks());
 
 function fetchTasks(){
     fetch('api/task')
