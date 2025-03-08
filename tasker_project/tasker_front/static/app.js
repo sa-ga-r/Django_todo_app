@@ -52,11 +52,11 @@ function delTask(taskid){
 function createTask(){
     const title = document.getElementById("title_input").value.trim();
     const description = document.getElementById("desc_input").value.trim();
-    const isCompleted = document.getElementById("is_complited_chkbx").checked;
+    const isComplited = document.getElementById("is_complited_chkbx");
     const taskData = {
         title : title,
         description : description,
-        is_completed : isCompleted,
+        is_complited : isComplited,
     };
     fetch('api/task/', {
         method : "POST",
