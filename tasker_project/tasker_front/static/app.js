@@ -42,9 +42,15 @@ function delTask(taskId){
         method : "DELETE",
         headers : {
             "Content-type" : "application/json",
-        }
+        },
     })
     .then(responce => {
-        fetchTasks();
+        if (responce.ok){
+            console.log('Task ${taskId} deleted successfully');
+            fetchTasks();
+        } else {
+            console.error("Failed to delete task");
+        }
     })
+    .catch(error => console.error("Error deleting task ${Task}, error"));
 }
