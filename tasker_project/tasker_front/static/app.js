@@ -38,19 +38,19 @@ function updateTable(data){
 }
 
 function delTask(taskid){
-    fetch('api/task/${taskid}/', {
+    fetch(`api/task/${taskid}/`, {
         method : "DELETE",
         headers : {
             "Content-Type" : "application/json",
         },
     })
-    .then(responce => {
-        if (responce.ok){
-            console.log('Task ${taskId} deleted successfully');
+    .then(response => {
+        if (response.ok){
+            console.log('Task ${taskid} deleted successfully');
             fetchTasks();
         } else {
             console.error("Failed to delete task");
         }
     })
-    .catch(error => console.error("Error deleting task ${Task}, error"));
+    .catch(error => console.error("Error deleting task ${Taskid}, error"));
 }
