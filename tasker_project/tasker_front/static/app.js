@@ -11,7 +11,6 @@ function updateTable(data){
     const tableBody = document.getElementById("task_table_body");
     tableBody.innerHTML = "";
     data.forEach(task => {
-        console.log(task.id);
         const row = document.createElement("tr");
         const idCell = document.createElement("td");
         idCell.textContent = task.id;
@@ -57,5 +56,5 @@ function delTask(taskId){
 }
 
 function del_task(taskid){
-    console.log(taskid);
+    console.log("Task ID:", taskid);
 }
