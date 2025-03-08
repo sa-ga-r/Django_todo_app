@@ -52,7 +52,7 @@ function delTask(taskid){
 function createTask(){
     const title = document.getElementById("title_input").value.trim();
     const description = document.getElementById("desc_input").value.trim();
-    const isCompleted = document.getElementById("is_completed_chkbx").checked;
+    const isCompleted = document.getElementById("is_complited_chkbx").checked;
     const taskData = {
         title : title,
         description : description,
