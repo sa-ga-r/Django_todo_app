@@ -11,6 +11,7 @@ function updateTable(data){
     const tableBody = document.getElementById("task_table_body");
     tableBody.innerHTML = "";
     data.forEach(task => {
+        console.log(task.id);
         const row = document.createElement("tr");
         const idCell = document.createElement("td");
         idCell.textContent = task.id;
