@@ -48,3 +48,24 @@ function delTask(taskid){
             fetchTasks();
     })
 }
+
+function createTask(){
+    const title = document.getElementById("title_input").value.trim();
+    const description = document.getElementById("desc_input").value.trim();
+    const taskData = {
+        title : title,
+        description : description,
+        is_completed : false,
+    };
+    fetch('api/task/', {
+        method : "POST",
+        headers : {
+            "Content-Type" : "application/json",
+        },
+        body : JSON.stringify(taskData),
+    })
+    .then(response => response.json());
+    document.getElementById("title_input").value = "";
+    document.getElementById("desc_input").value = "";
+    fetchTasks();
+}
