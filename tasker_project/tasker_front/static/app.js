@@ -41,7 +41,7 @@ function delTask(taskid){
     fetch('api/task/${taskid}/', {
         method : "DELETE",
         headers : {
-            "Content-type" : "application/json",
+            "Content-Type" : "application/json",
         },
     })
     .then(responce => {
