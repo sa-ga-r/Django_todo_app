@@ -27,7 +27,7 @@ function updateTable(data){
         const delBtn = document.createElement("button");
         delBtn.textContent = "Delete";
         delBtn.style.marginLeft = "10px";
-        delBtn.onclick = () => delTask(task.id);
+        delBtn.onclick = () => del_task(task.id);
         actCell.appendChild(delBtn);
 
         row.appendChild(idCell);
@@ -54,4 +54,8 @@ function delTask(taskId){
         }
     })
     .catch(error => console.error("Error deleting task ${Task}, error"));
+}
+
+function del_task(taskid){
+    console.log(taskid);
 }
