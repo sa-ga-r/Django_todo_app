@@ -36,3 +36,15 @@ function updateTable(data){
         tableBody.appendChild(row);
     });
 }
+
+function delTask(taskId){
+    fetch('api/task/${taskId}/', {
+        method : "DELETE",
+        headers : {
+            "Content-type" : "application/json",
+        }
+    })
+    .then(responce => {
+        fetchTasks();
+    })
+}
