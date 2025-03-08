@@ -45,12 +45,6 @@ function delTask(taskid){
         },
     })
     .then(response => {
-        if (response.ok){
-            console.log('Task ${taskid} deleted successfully');
             fetchTasks();
-        } else {
-            console.error("Failed to delete task");
-        }
     })
-    .catch(error => console.error("Error deleting task ${Taskid}, error"));
 }
