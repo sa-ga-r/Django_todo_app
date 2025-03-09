@@ -51,7 +51,6 @@ function delTask(taskid){
 
 function createTask(){
     const taskid = document.getElementById("taskid").value;
-    console.log(taskid);
     const title = document.getElementById("title_input").value.trim();
     const description = document.getElementById("desc_input").value.trim();
     const isComplited = document.getElementById("is_complited_chkbx").value;
@@ -71,9 +70,9 @@ function createTask(){
         body : JSON.stringify(taskData),
     })
     .then(response => response.json());
-    document.getElementById("title_input").value = "";
-    document.getElementById("desc_input").value = "";
-    document.getElementById("is_complited_chkbx").checked=false;
+    document.getElementById("taskid").value = "";
+    document.getElementById("task_form").reset();
+    document.getElementById("is_complited_chkbx").checked = false;
     fetchTasks();
 }
 
