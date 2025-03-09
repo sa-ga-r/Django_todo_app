@@ -62,7 +62,7 @@ function createTask(){
         is_complited : isComplited,
     };
     const url = taskid ? `api/task/${taskid}` : "api/task/";
-    const method = taskid ? "PUT" : "POST";
+    const method = taskid ? "PATCH" : "POST";
 
     console.log("Method:", method);
     console.log("URL:", url);
