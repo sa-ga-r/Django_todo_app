@@ -72,7 +72,7 @@ function createTask(){
     .then(response => response.json());
     document.getElementById("title_input").value = "";
     document.getElementById("desc_input").value = "";
-    document.getElementById("is_complited_chkbx").value=false;
+    document.getElementById("is_complited_chkbx").checked=false;
     fetchTasks();
 }
 
