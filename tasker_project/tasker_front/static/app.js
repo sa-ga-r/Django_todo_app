@@ -83,7 +83,7 @@ function editTask(taskid){
         document.getElementById("title_input").value=data.title;
         document.getElementById("desc_input").value=data.description;
         document.getElementById("taskid").value=data.id;
-        document.getElementById("is_complited_chkbx").value=data.is_complited;
+        document.getElementById("is_complited_chkbx").checked=data.is_complited;
     })
     .catch(error => console.error("Error fetching tasks:", error));
 }
