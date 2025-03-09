@@ -54,6 +54,8 @@ function createTask(){
     const title = document.getElementById("title_input").value.trim();
     const description = document.getElementById("desc_input").value.trim();
     const isComplited = document.getElementById("is_complited_chkbx").checked;
+    console.log("ID before submitting:", taskid);
+
     const taskData = {
         title : title,
         description : description,
@@ -61,6 +63,9 @@ function createTask(){
     };
     const url = taskid ? `api/task/${taskid}` : 'api/task/';
     const method = taskid ? "PUT" : "POST";
+
+    console.log("Method:", method);
+    console.log("URL:", url);
 
     fetch(url, {
         method : method,
