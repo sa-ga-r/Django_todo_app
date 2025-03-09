@@ -71,7 +71,7 @@ function createTask(){
     })
     .then(response => response.json());
     document.getElementById("taskid").value = "";
-    document.getElementById("task_form").reset();
+    document.getElementsByClassName("task_form").reset();
     document.getElementById("is_complited_chkbx").checked = false;
     fetchTasks();
 }
