@@ -50,6 +50,7 @@ function delTask(taskid){
 }
 
 function createTask(){
+    const taskid = document.getElementById("taskid").value;
     const title = document.getElementById("title_input").value.trim();
     const description = document.getElementById("desc_input").value.trim();
     const isComplited = document.getElementById("is_complited_chkbx").value;
@@ -58,8 +59,11 @@ function createTask(){
         description : description,
         is_complited : isComplited,
     };
-    fetch('api/task/', {
-        method : "POST",
+    const url = taskid ? `api/task/${taskid}` : 'api/task/';
+    const method = taskid ? "PUT" : "POST";
+
+    fetch(url, {
+        method : method,
         headers : {
             "Content-Type" : "application/json",
         },
@@ -68,5 +72,18 @@ function createTask(){
     .then(response => response.json());
     document.getElementById("title_input").value = "";
     document.getElementById("desc_input").value = "";
+    document.getElementById("is_complited_chkbx").value=false;
     fetchTasks();
+}
+
+function editTask(taskid){
+    fetch(`api/task/${taskid}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("title_input").value=data.title;
+        document.getElementById("desc_input").value=data.description;
+        document.getElementById("taskid").value=data.id;
+        document.getElementById("is_complited_chkbx").value=data.is_complited;
+    })
+    .catch(error => console.error("Error fetching tasks:", error));
 }
