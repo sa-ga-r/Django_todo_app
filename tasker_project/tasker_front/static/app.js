@@ -53,7 +53,7 @@ function createTask(){
     const taskid = document.getElementById("taskid").value;
     const title = document.getElementById("title_input").value.trim();
     const description = document.getElementById("desc_input").value.trim();
-    const isComplited = document.getElementById("is_complited_chkbx").value;
+    const isComplited = document.getElementById("is_complited_chkbx").checked;
     const taskData = {
         title : title,
         description : description,
