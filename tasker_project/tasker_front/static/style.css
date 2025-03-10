@@ -80,9 +80,9 @@ button:hover {
 .status_header {
     text-align: center;
 }
-
+/*
 th, td {
     padding : 10px;
     /*text-align : left;*/
-    border : 1px solid #ddd;
-}
+    /*border : 1px solid #ddd;
+}*/
