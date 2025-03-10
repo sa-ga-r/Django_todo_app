@@ -77,12 +77,12 @@ button:hover {
     background-color : #e8f4f4;
 }
 
-th, td {
-    padding : 10px;
-    text-align : left;
-    border : 1px solid #ddd;
-}
-
 .status_header {
     text-align: center;
+}
+
+th, td {
+    padding : 10px;
+    /*text-align : left;*/
+    border : 1px solid #ddd;
 }
