@@ -10,10 +10,10 @@ function fetchTasks(){
 function updateTable(data){
     const tableBody = document.getElementById("task_table_body");
     tableBody.innerHTML = "";
-    data.forEach(task => {
+    data.forEach((task, index) => {
         const row = document.createElement("tr");
         const idCell = document.createElement("td");
-        idCell.textContent = task.id;
+        idCell.textContent = index + 1;
         const titleCell = document.createElement("td");
         titleCell.textContent = task.title;
         const descCell = document.createElement("td");
