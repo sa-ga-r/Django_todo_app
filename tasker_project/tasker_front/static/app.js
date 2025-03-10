@@ -21,7 +21,6 @@ function updateTable(data){
         const statusCell = document.createElement("td");
         statusCell.textContent = task.is_complited ? "DONE" : "PENDING";
         const actCell = document.createElement("td");
-        document.getElementById("status_header").style.textAlign="center";
         const editBtn = document.createElement("button");
         editBtn.textContent = "Edit";
         editBtn.style.marginRight= "4px";
@@ -59,7 +58,6 @@ function createTask(){
     const title = document.getElementById("title_input").value.trim();
     const description = document.getElementById("desc_input").value.trim();
     const isComplited = document.getElementById("is_complited_chkbx").checked;
-    console.log("ID before submitting:", taskid);
 
     const taskData = {
         title : title,
@@ -68,9 +66,6 @@ function createTask(){
     };
     const url = taskid ? `api/task/${taskid}/` : "api/task/";
     const method = taskid ? "PATCH" : "POST";
-
-    console.log("Method:", method);
-    console.log("URL:", url);
 
     fetch(url, {
         method : method,
