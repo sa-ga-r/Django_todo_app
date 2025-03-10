@@ -82,3 +82,7 @@ th, td {
     text-align : left;
     border : 1px solid #ddd;
 }
+
+.status_header {
+    text-align: center;
+}
