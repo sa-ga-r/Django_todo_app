@@ -81,7 +81,7 @@ th.act_header {
     text-align: center;
 }
 
-td {
+th, td {
     padding : 10px;
     text-align : left;
     border : 1px solid #ddd;
