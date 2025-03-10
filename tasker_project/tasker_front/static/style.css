@@ -77,12 +77,11 @@ button:hover {
     background-color : #e8f4f4;
 }
 
-.act_header {
+th.act_header {
     text-align: center;
-    margin-right: 20px;
 }
 
-th, td {
+td {
     padding : 10px;
     text-align : left;
     border : 1px solid #ddd;
