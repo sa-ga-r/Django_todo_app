@@ -21,13 +21,15 @@ function updateTable(data){
         const statusCell = document.createElement("td");
         statusCell.textContent = task.is_complited ? "DONE" : "PENDING";
         const actCell = document.createElement("td");
+        actCell.style.textAlign = "center";
         const editBtn = document.createElement("button");
         editBtn.textContent = "Edit";
+        editBtn.style.marginRight= "4px";
         editBtn.onclick = () => editTask(task.id);
         actCell.appendChild(editBtn);
         const delBtn = document.createElement("button");
         delBtn.textContent = "Delete";
-        delBtn.style.marginLeft = "10px";
+        delBtn.style.marginLeft = "4px";
         delBtn.onclick = () => delTask(task.id);
         actCell.appendChild(delBtn);
 
