@@ -27,7 +27,7 @@ function updateTable(data){
         actCell.appendChild(editBtn);
         const delBtn = document.createElement("button");
         delBtn.textContent = "Delete";
-        /*delBtn.style.marginLeft = "10px";*/
+        delBtn.style.marginLeft = "10px";
         delBtn.onclick = () => delTask(task.id);
         actCell.appendChild(delBtn);
 
