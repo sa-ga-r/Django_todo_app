@@ -19,7 +19,7 @@ function updateTable(data){
         const descCell = document.createElement("td");
         descCell.textContent = task.description;
         const statusCell = document.createElement("td");
-        statusCell.textContent = task.is_complited? "DONE" : "PENDING";
+        statusCell.textContent = task.is_complited ? "DONE" : "PENDING";
         const actCell = document.createElement("td");
         const editBtn = document.createElement("button");
         editBtn.textContent = "Edit";
@@ -27,7 +27,7 @@ function updateTable(data){
         actCell.appendChild(editBtn);
         const delBtn = document.createElement("button");
         delBtn.textContent = "Delete";
-        delBtn.style.marginLeft = "10px";
+        /*delBtn.style.marginLeft = "10px";*/
         delBtn.onclick = () => delTask(task.id);
         actCell.appendChild(delBtn);
 
