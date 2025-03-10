@@ -21,6 +21,7 @@ function updateTable(data){
         const statusCell = document.createElement("td");
         statusCell.textContent = task.is_complited ? "DONE" : "PENDING";
         const actCell = document.createElement("td");
+        document.getElementById("status_header").style.textAlign="center";
         const editBtn = document.createElement("button");
         editBtn.textContent = "Edit";
         editBtn.style.marginRight= "4px";
