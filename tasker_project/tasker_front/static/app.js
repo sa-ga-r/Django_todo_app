@@ -18,6 +18,8 @@ function updateTable(data){
         titleCell.textContent = task.title;
         const descCell = document.createElement("td");
         descCell.textContent = task.description;
+        const statusCell = document.createElement("td");
+        statusCell.textContent = task.is_complited? "DONE" : "PENDING";
         const actCell = document.createElement("td");
         const editBtn = document.createElement("button");
         editBtn.textContent = "Edit";
