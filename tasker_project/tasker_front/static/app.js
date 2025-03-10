@@ -34,6 +34,7 @@ function updateTable(data){
         row.appendChild(idCell);
         row.appendChild(titleCell);
         row.appendChild(descCell);
+        row.appendChild(statusCell);
         row.appendChild(actCell);
         tableBody.appendChild(row);
     });
